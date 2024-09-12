@@ -1,0 +1,127 @@
+
+
+main #containerPhotoProfile {
+    font-size: 20px;
+}
+
+
+main #wallPaperIMG {
+    cursor: pointer ;
+}
+
+main #switchIcon {
+    width: 7%;
+    height: auto;
+    position: relative;
+    bottom: 7rem;
+    left: 3rem;
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+main #trashIcon {
+    width: 7.5%;
+    height: auto;
+    position: relative;
+    left: -6px;
+    margin: 0;
+}
+
+
+
+main .cardConfig img {
+    margin-right: 10px;
+    width: 6%;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+
+
+main hr {
+    width: 60%;
+}
+
+
+main input {
+    width: 10%;
+    background-color: rgb(32, 138, 224);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: ease 0.4s;
+}
+
+main input:hover {
+    background-color: white;
+}
+
+main button {
+    background-color: black;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    padding: 4px 10px;
+    transition: 0.4s;
+}
+
+
+main button:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+@media (max-width: 992px) {
+    main #firstColumn {
+        border: none !important;
+        margin-bottom: 100px;
+    }
+    main  hr {
+        width: 100%;
+    }
+    main #secondColumn {
+        border-top: 1px solid white;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 540px) {
+
+    main input {
+        width: 60px;
+        height: 20px;
+    }
+
+    main button {
+        font-size: 12px;
+    }
+    main .cardConfig img {
+        margin-right: 6px;
+    }
+    main #cardConfig1 p, input {
+        margin-bottom: 16px !important;
+    }
+    main #cardConfig2 p, input {
+        margin-bottom: 16px !important;
+    }
+    
+    main #rowGrid #hr3 {
+        margin-top: 16px !important;
+    }
+
+    main #fontIcon {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    main #switchIcon {
+        bottom: 6rem;
+        left: 2rem;
+    }
+}

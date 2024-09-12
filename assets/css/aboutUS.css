@@ -1,0 +1,69 @@
+
+main #containerText hr {
+    width: 100%;
+    background-color: black;
+    height: 3px;
+    opacity: 1;
+}
+
+
+main .imgPhoto {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+main .profileCard {
+    max-width: 300px;
+    height: 300px;
+}
+
+
+main {
+    margin-bottom: 200px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 22px;
+    }
+    main .profileCard {
+        max-width: 200px;
+        padding: 10px;
+    }
+    main .profileCard img {
+        width: 110px;
+        height: 110px;
+    }
+    main .profileCard h2 {
+        font-size: 20px;
+    }
+    main .profileCard p {
+        font-size: 14px;
+    }
+    footer h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 430px) {
+    main .profileCard h2 {
+        font-size: 14px;
+    }
+    main h1 {
+        font-size: 20px;
+    }
+    main .profileCard p {
+        font-size: 12px;
+    }
+    footer h1 {
+        font-size: 18px;
+    }
+
+}

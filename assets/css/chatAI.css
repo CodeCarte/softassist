@@ -1,0 +1,233 @@
+body {
+    font-family: 'inter', sans-serif
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main #firstColumn {
+    width: 15%;
+    background-color: #34596F;
+    height: 100vh;
+}
+
+main button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    width: 50%;
+    height: 5%;
+    border-radius: 8px;
+    transition: 0.4s;
+    font-size: 1.4vh;
+}
+
+main button:hover {
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 14px;
+}
+
+main #newChatContainer p {
+    margin: 0;
+}
+
+main #newChatIcon {
+    width: 15%;
+    height: auto;
+}
+
+
+main .pText {
+    width: 120px;
+    cursor: pointer;
+}
+
+main #secondColumn {
+    width: 85%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+main #secondColumn #inputContainer {
+    margin: auto auto 0 auto
+
+}
+
+main #secondColumn #inputContainer input {
+    width: 700px;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 40px;
+    border-radius: 20px;
+    background-color: transparent;
+
+}
+
+main #secondColumn #inputContainer input::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+
+main #secondColumn #returnPageTag {
+    text-decoration: none;
+    color: white;   
+}
+
+
+main .textCardTitlle {
+    width: 80%;
+    border-bottom: 2px solid white;
+}
+
+
+@media (max-width: 1455px) {
+    main button {
+        width: 85px;
+        height: 35px;
+        font-size: 0.8vh;
+    }
+    main .textCard {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    main button {
+        width: 80px;
+        height: 30px;
+        font-size: 8px;
+    }
+    main .textCard {
+        font-size: 12px;
+    }
+
+    main #secondColumn #inputContainer input {
+        width: 500px;
+        font-size: 14px;
+    }
+
+    main #returnPageTag {
+        font-size: 12px;
+    }
+
+    main #returnIcon {
+        width: 30px;
+        height: auto;
+    }
+
+}
+
+@media (max-width:995px) {
+    main .textCard {
+        font-size: 8px;
+    }
+    main button {
+        width: 60px;
+        height: 26px;
+        font-size: 6px;
+    }
+
+
+}
+
+
+@media (max-width: 825px) {
+    main #secondColumn #inputContainer input {
+        width: 400px;
+        height: 40px;
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 725px) {
+    main .textCard {
+        font-size: 6px;
+    }
+    main #returnPageTag {
+        font-size: 9px;
+    }
+
+    main #returnIcon {
+        width: 20px;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 683px) {
+
+    main button {
+        width: 50px;
+        height: 24px;
+        margin: 0 auto;
+    }
+
+    main .textCard {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main .textCard .textCardTitlle {
+        padding-bottom: 4px;
+        margin: 8px !important;
+    }
+    main #secondColumn #inputContainer input {
+        width: 280px;
+        height: 34px;
+        font-size: 10px;
+    }
+
+
+}
+
+
+@media (max-width: 640px) {
+    main button {
+        width: 40px;
+        height: 24px;
+    }
+}
+
+
+@media (max-width: 511px) {
+    main button {
+        width: 100%;
+        height: 24px;
+        font-size: 4px;
+        padding: 7px;
+    }
+
+    main #newChatIcon {
+        display: none;
+    }
+}
+
+
+@media (max-width: 403px) {
+    main .textCard {
+        word-wrap: break-word;
+    }
+
+    main #secondColumn #inputContainer input {
+        width: 200px;
+        height: 30px;
+        font-size: 8px;
+    }
+}

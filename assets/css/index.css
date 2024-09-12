@@ -1,0 +1,226 @@
+main {
+    margin-bottom: 32%;
+}
+
+
+main #mainVideo {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+}
+
+main #chatSection {
+    padding-top: 16%;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+main #h1Section {
+    font-size: 50px;
+}
+
+main #pSection {
+    font-size: 38px;
+    font-family: sans-serif;
+}
+
+main button {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    transition: 0.4s;
+}
+
+main button:hover {
+    background-color: rgb(22, 40, 201);
+}
+
+main button #buttonChatAi {
+    text-decoration: none;
+    color: white;
+}
+
+main #imagemButton {
+    width: 20px;
+    height: auto;
+}
+
+
+
+
+footer #rowVideoPitch1, #rowVideoPitch2 {
+    width: 80%;
+}
+
+footer .videoPitch {
+    width: 300px;
+    height: 200px;
+    background-color: gray;
+}
+
+footer #hrText {
+    width: 400px;
+}
+
+footer .containerText {
+    width: 30%;
+}
+
+footer .h2Text {
+    font-size: 25px;
+}
+
+
+
+
+
+@media (max-width: 1600px) {
+    main {
+        margin-bottom: 22%;
+    }
+}
+
+@media (max-width: 1230px) {
+    main #chatSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+    main #h1Section {
+        font-size: 30px;
+    }
+    
+    main #pSection {
+        font-size: 28px;
+    }
+
+    main button {
+        display: flex;
+        border-radius: 14px;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        height: 40px;
+    }
+}
+
+
+@media(max-width: 968px) {
+    main {
+        margin-bottom: 17%;
+    }
+    footer p {
+        font-size: 11px;
+    }
+    footer .videoIframe {
+        width: 200px;
+        height: 120px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    main #h1Section {
+        font-size: 20px;
+    }
+    
+    main #pSection {
+        font-size: 18px;
+    }
+
+    main button {
+        height: 20px;
+    }
+
+    footer p {
+        font-size: 8px;
+    }
+    footer h1, h2 {
+        font-size: 16px;
+    }
+    footer #hrText {
+        margin: 0;
+        width: 200px;
+    }
+    footer .videoIframe {
+        width: 220px;
+        height: 160px;
+    }
+
+    footer .columnContainer {
+        flex-direction: column !important;
+        gap: 0px !important;
+    }
+
+    footer .h2Text {
+        font-size: 20px;
+    }
+    footer p {
+        font-size: 12px;
+        }
+
+
+}
+
+@media (max-width: 576px) {
+
+    main #chatSection {
+        padding-top: 10%;
+    }
+    main #h1Section {
+        display: none;
+    }
+    main #pSection {
+        font-family: 'inter', sans-serif;
+        font-size: 12px;
+    }
+    main button {
+        display: flex;
+        border-radius: 12px;
+        justify-content: center;
+        align-items: center;
+        font-size: 8px;
+        height: 10px;
+    }
+    footer .videoIframe {
+        width: 200px;
+        height: 120px;
+    }
+    footer h1,h2 {
+        font-size: 12px;
+    }
+    footer .containerText {
+        width: 40%;
+    }
+    main {
+        margin-bottom: 24%;
+    }
+    footer .h2Text {
+        font-size: 16px;
+    }
+    footer  .containerText {
+        text-align: center;
+    }
+
+}
+
+
+
+@media (max-width: 380px) {
+    main {
+        margin-bottom: 14%;
+    }
+    footer p {
+        font-size: 9px;
+        }
+}
+

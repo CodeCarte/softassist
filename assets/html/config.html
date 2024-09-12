@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="../css/headerMenu.css">
+    <link rel="stylesheet" href="../css/config.css">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <div class="container-fluid headerContainer p-0">
+            <nav id="navigationHeader" class="d-flex justify-content-between align-items-center p-3">
+                <a href="../../index.html"><img src="../imgs/logoSoftTek.png" class="imgSoftTek " alt="Logo da softTek"></a>     
+                <div class="d-flex align-items-center gap-3">
+                    <div><img id="imgHamburguer" src="../imgs/image.png" alt="Menu Hamburguer"></div>
+                </div>
+            </nav>
+            <nav id="menuHeader" class="text-white pt-2  pb-1">
+                <ul id="ulMenu" class="fs-5">
+                    <li class="listMenu"><a class="menuItens " href="../html/chatAI.html">Chat IA</a></li>
+                    <li class="listMenu"><a class="menuItens" href="../html/aboutUS.html">Sobre o projeto</a></li>
+                    <li class="listMenu"><a class="menuItens" href="../html/profile.html">Perfil</a></li>
+                    <li class="listMenu"><a class="menuItens" href="../html/config.html" class="">Configurações</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-fluid mt-5">
+            <div id="rowGrid" class="row text-white">
+                <div id="firstColumn" class="col-lg-6 border-end">
+                    <div id="containerPhotoProfile" class=" f-100 d-flex align-items-center justify-content-center flex-column">
+                        <p>Foto de perfil</p>
+                        <img src="../imgs/Ellipse 3 (2).png" class="img-fluid w-25 mb-3" alt="">
+                        <p class="border-bottom">Nome</p>
+                        <img src="../imgs/write-svgrepo-com 1.png" id="switchIcon" alt="">
+                    </div>
+                    <div id="containerWallPaper" class="f-100 d-flex align-items-center justify-content-center flex-column">
+                        <p>Plano de fundo</p>
+                        <img src="../imgs/wallPaperswitch.png" class="img-fluid w-50 " id="wallPaperIMG" alt="">
+                    </div>
+                </div>
+                <div id="secondColumn" class="col-lg-6" >
+                    <div id="cardConfig1" class="cardConfig d-flex align-items-center gap-2">
+                        <img id="fontIcon" src="../imgs/fontIcon.png" class="img-fluid" alt="">
+                        <p class="m-0">Fonte</p>
+                        <input type="text" disabled>
+                    </div>
+                    <hr id="hr1" class="m-1">
+                    <div id="cardConfig2" class=" cardConfig d-flex align-items-center gap-2">
+                        <img src="../imgs/language-svgrepo-com 1.png" class="img-fluid" alt="">
+                        <p class="m-0">Idioma</p>
+                        <input type="text" disabled>
+                    </div>
+                    <hr id="hr2" class="m-1">
+                    <div id="cardConfig3" class=" cardConfig d-flex align-items-center gap-2">
+                        <img src="../imgs/delete_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" class="img-fluid" id="trashIcon" alt="">
+                        <p class="m-0" id="trashText">Excluir todos os chats</p>
+                        <button>Excluir</button>
+                    </div>
+                    <hr id="hr3" class="m-1">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/index.js"></script>
+</body>

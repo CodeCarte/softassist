@@ -1,0 +1,64 @@
+
+main #wallPaper {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+}
+
+main #profilePhoto {
+   display: block;
+   margin: 0 auto;
+   width: 10%;
+   height: auto;
+   padding-top: 18%;
+   z-index: 2;
+}
+
+main #gridContainer {
+    margin-top: 100px;
+}
+
+
+main hr {
+    margin: 0px 0px 6px 0px;
+    width: 200px;
+}
+
+main p {
+    font-size: 22px;
+}
+
+
+
+@media (max-width: 991px) {
+    main #solvedProblems {
+        margin-top: 80px;
+    }
+}
+
+
+@media (max-width: 640px ) {
+    main h2 {
+        font-size: 18px;
+    }
+    main p {
+        font-size: 13px;
+    }
+    main #gridContainer {
+        margin-top: 60px;
+    }
+}
+
+
+@media (max-width: 430px) {
+    main h2 {
+        font-size: 14px;
+    }
+    main p {
+        font-size: 12px;
+    }
+    main #gridContainer {
+        margin-top: 60px;
+    }
+}

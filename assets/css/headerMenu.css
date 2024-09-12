@@ -1,0 +1,203 @@
+
+
+
+body {
+    background-color: #34596F;
+    font-family: 'inter', sans-serif
+}
+
+
+:root {
+    --hoverFont-color: #00c8ff
+}
+
+
+
+
+
+header .imgSoftTek {
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+header #navigationHeader {
+    background-color: black;
+}
+
+
+header #imgHamburguer {
+    width: 60px;
+    height: auto;
+}
+
+
+header #aboutUS {
+    outline: none;
+    text-decoration: none;
+    color: white;
+    transition: 0.4s;
+}
+
+
+header #aboutUS:hover {
+    color: var(--hoverFont-color);
+}
+
+
+header #imgHamburguer {
+    cursor:pointer
+}
+
+
+
+
+header #ulMenu {
+    list-style: none;
+    margin: 0;
+    text-decoration: none;
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+
+}
+
+
+header .listMenu {
+    margin-bottom: 10px;
+
+}
+
+header #menuHeader {
+    width: 100%;
+    display: none;
+    position: absolute; 
+    top: 90px; 
+    right: 0;
+    left: 0;
+    z-index: 10; 
+    background-color: rgb(14, 14, 14);
+    display: none;
+}
+
+
+
+
+header .menuItens {
+    color: white;
+    text-decoration: none;
+    transition: 0.4s;
+    
+
+}
+
+
+
+header .menuItens:hover {
+    color: var(--hoverFont-color);
+}
+
+
+
+
+@media (max-width: 1200px) {
+
+    
+}
+
+
+@media (max-width: 992px) {
+
+    header #navigationHeader {
+        height: 70px;
+    }
+
+   header .imgSoftTek {
+        width: 12%;
+        height: auto;
+    }
+
+    header #imgHamburguer {
+        width: 30px;
+        height: auto;
+    }
+
+    header #menuHeader {
+        width: 100%;
+        height: 40px;
+        top: 70px;
+    }
+
+    header .listMenu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+    header .menuItens {
+        font-size: 13px;
+    }
+
+    
+
+
+
+}
+
+@media (max-width: 700px) {
+    #aboutUS {
+        display: none;
+    }
+   
+
+}
+
+@media (max-width: 576px) {
+    header #navigationHeader {
+        height: 50px;
+    }
+
+    header #menuHeader {
+        width: 100%;
+        height: 36px;
+        top: 50px;
+    }
+
+    header .menuItens {
+        font-size: 10px;
+    }
+
+    header #ulMenu {
+        gap: 40px;
+    }
+
+}
+
+
+@media (max-width: 467px) {
+    header #navigationHeader {
+        height: 30px;
+    }
+    header #menuHeader {
+        height: 30px;
+        top: 30px;
+    }
+
+    header .menuItens {
+        font-size: 10px;
+    }
+    header #ulMenu {
+        gap: 20px;
+    }
+
+}
+
+
+
+
+
+
