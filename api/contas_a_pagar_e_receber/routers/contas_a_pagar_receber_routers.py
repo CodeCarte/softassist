@@ -18,7 +18,7 @@ class ContaPagarReceber_Request(BaseModel): #dados que o cliente vai enviar ao s
     tipo: str #PAGAR, RECEBER
 
 
-@router.get("/", response_model=List[ContaPagarReceber_Response]) #/ Indica que é a raiz de router, no caso (/contas-a-pagar-e-receber)
+@router.get("", response_model=List[ContaPagarReceber_Response]) #/ Indica que é a raiz de router, no caso (/contas-a-pagar-e-receber)
 def listar_contas():
 
     return [
@@ -37,7 +37,7 @@ def listar_contas():
             ),
 ]
 
-@router.post("/", response_model=ContaPagarReceber_Response, status_code=201)
+@router.post("", response_model=ContaPagarReceber_Response, status_code=201)
 def criar_contas(conta: ContaPagarReceber_Request):
 
     return ContaPagarReceber_Response (

@@ -5,7 +5,6 @@ from contas_a_pagar_e_receber.routers import contas_a_pagar_receber_routers
 
 app = FastAPI()
 
-
 @app.get("/")
 def oi_eu_sou_programador() -> str:
     
