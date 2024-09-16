@@ -16,9 +16,25 @@ pip install fastapi
 pip install uvicorn
 `
 
-- google-generativeai==0.8.1
+- google-generativeai==0.8.1:
 `
 pip install -q -U google-generativeai
 `
+
+- pytest==8.3.3:
+`
+pip install pytest
+`
+
+- requests==2.32.3:
+`
+pip install requests
+`
+
+- httpx==0.27.2:
+`
+pip install httpx
+`
+
 
 

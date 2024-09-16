@@ -1,5 +1,6 @@
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, APIRouter
+from contas_a_pagar_e_receber.routers import contas_a_pagar_receber_routers
 
 
 app = FastAPI()
@@ -9,6 +10,8 @@ app = FastAPI()
 def oi_eu_sou_programador() -> str:
     
     return "Oi, eu sou programador!"
+
+app.include_router(contas_a_pagar_receber_routers.router)
 
 
 if __name__ == "__main__":
