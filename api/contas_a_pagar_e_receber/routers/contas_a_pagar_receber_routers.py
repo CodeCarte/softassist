@@ -6,19 +6,19 @@ from typing import List
 router = APIRouter(prefix="/contas-a-pagar-e-receber")
 
 
-class ContaPagarReceber_Response(BaseModel): #dados que o cliente vai receber do servidor
+class ContaPagarReceber_Response(BaseModel): #Pydantic sendo utilizado
     id: int
     descricao: str
     valor: Decimal
     tipo: str #PAGAR, RECEBER
 
-class ContaPagarReceber_Request(BaseModel): #dados que o cliente vai enviar ao servidor
+class ContaPagarReceber_Request(BaseModel): 
     descricao: str
     valor: Decimal
     tipo: str #PAGAR, RECEBER
 
 
-@router.get("", response_model=List[ContaPagarReceber_Response]) #/ Indica que é a raiz de router, no caso (/contas-a-pagar-e-receber)
+@router.get("", response_model=List[ContaPagarReceber_Response]) #/ Definicao da Rota GET (ContaPagarReceber)
 def listar_contas():
 
     return [
@@ -34,10 +34,10 @@ def listar_contas():
         descricao="Salário",
         valor=5000,
         tipo="RECEBER"
-            ),
+        ),
 ]
 
-@router.post("", response_model=ContaPagarReceber_Response, status_code=201)
+@router.post("", response_model=ContaPagarReceber_Response, status_code=201) #Definicao da Rota POST (ContaPagarReceber)
 def criar_contas(conta: ContaPagarReceber_Request):
 
     return ContaPagarReceber_Response (

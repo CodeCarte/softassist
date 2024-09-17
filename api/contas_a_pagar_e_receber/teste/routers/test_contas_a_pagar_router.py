@@ -5,21 +5,24 @@ client = TestClient(app)
 
 def test_listar_contas_a_pagar_e_receber():
 
-    response = client.get('/contas-a-pagar-e-receber')
+    response = client.get('/contas-a-pagar-e-receber') #Requisitando dados para o servidor
+    assert response.status_code == 200 #Verificando se a solicitacao foi bem sucedida
 
-    assert response.status_code == 200
+    contas = response.json()
 
-    assert response.json() == [
+    for conta in contas:
+        conta['valor'] = float(conta['valor'])
 
-        {'id': 1, 'descricao': 'Aluguel', 'valor': '1000.5', 'tipo': 'PAGAR'}, 
-        {'id': 2, 'descricao': 'Salário', 'valor': '5000', 'tipo': 'RECEBER'}
+    assert contas == [ #Verificando se a resposta Json é igual a lista esperada
+        {'id': 1, 'descricao': 'Aluguel', 'valor': 1000.50, 'tipo': 'PAGAR',}, 
+        {'id': 2, 'descricao': 'Salário', 'valor': 5000.0, 'tipo': 'RECEBER'}
     ]
 
-
 def test_criar_conta_a_pagar_e_receber():
+
     nova_conta = {
         "descricao": "Curso de Python",
-        "valor": '333',
+        "valor": 333,
         "tipo": "PAGAR"
     }
 
@@ -27,9 +30,15 @@ def test_criar_conta_a_pagar_e_receber():
     nova_conta_copy["id"] = 3
 
     response = client.post('/contas-a-pagar-e-receber', json=nova_conta)
-    assert response.status_code == 201
-    assert response.json() == nova_conta_copy
 
+    conta = response.json()
+    
+    conta['valor'] = float(conta['valor'])
+
+    assert conta == nova_conta_copy
+
+    assert response.status_code == 201
+  
 
 
 

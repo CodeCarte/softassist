@@ -19,12 +19,6 @@ pip install uvicorn
 - google-generativeai==0.8.1:
 `
 pip install -q -U google-generativeai
-`
-
-- pytest==8.3.3:
-`
-pip install pytest
-`
 
 - requests==2.32.3:
 `
@@ -35,6 +29,28 @@ pip install requests
 `
 pip install httpx
 `
+
+- SQLAlchemy==2.0.35:
+`
+pip install sqlalchemy
+`
+
+- psycopg2==2.9.9:
+`
+pip install psycopg2
+`
+
+
+
+<!--TESTS-->
+- pytest==8.3.3:
+`
+pip install pytest
+`
+
+
+
+
 
 
 

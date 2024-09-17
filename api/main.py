@@ -1,11 +1,15 @@
 import uvicorn
 from fastapi import FastAPI, APIRouter
 from contas_a_pagar_e_receber.routers import contas_a_pagar_receber_routers
+from shared.database import engine, Base
+
+Base.metadata.drop_all(bind=engine)
+Base.metadata.create_all(bind=engine)
 
 
 app = FastAPI()
 
-@app.get("/")
+@app.get("/") #O '@app' define uma rota para o caminho principal do site.
 def oi_eu_sou_programador() -> str:
     
     return "Oi, eu sou programador!"
