@@ -2,6 +2,11 @@ from fastapi import APIRouter
 from pydantic import BaseModel
 from decimal import Decimal
 from typing import List
+from sqlalchemy.orm import Session
+from fastapi import Depends
+from shared.dependencies import get_db
+from models.conta_a_pagar_receber_model import ContaPagarReceber
+from functions.sqlalchemy_object_to_dict import sqlalchemy_obj_to_dict
 
 router = APIRouter(prefix="/contas-a-pagar-e-receber")
 
@@ -38,13 +43,21 @@ def listar_contas():
 ]
 
 @router.post("", response_model=ContaPagarReceber_Response, status_code=201) #Definicao da Rota POST (ContaPagarReceber)
-def criar_contas(conta: ContaPagarReceber_Request):
+def criar_contas(conta_a_pagar_e_receber_request: ContaPagarReceber_Request, 
+                 db: Session = Depends(get_db)) -> ContaPagarReceber_Response:
+    
+
+    contas_a_pagar_e_receber = ContaPagarReceber(
+        conta_a_pagar_e_receber_request.model_dump()
+        )
+    
+    db.add(contas_a_pagar_e_receber)
+    db.commit()
+    db.refresh(contas_a_pagar_e_receber)
 
     return ContaPagarReceber_Response (
-        id=3,
-        descricao=conta.descricao,
-        valor=conta.valor,
-        tipo=conta.tipo
+
+        **sqlalchemy_obj_to_dict(contas_a_pagar_e_receber)  
     )
     
 
