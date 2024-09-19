@@ -1,12 +1,12 @@
 import uvicorn
 from fastapi import FastAPI, APIRouter
 from contas_a_pagar_e_receber.routers import contas_a_pagar_receber_routers
-from shared.database import engine, Base
+#from shared.database import engine, Base
 
-from contas_a_pagar_e_receber.models.conta_a_pagar_receber_model import ContaPagarReceber
+#from contas_a_pagar_e_receber.models.conta_a_pagar_receber_model import ContaPagarReceber
 
-Base.metadata.drop_all(bind=engine)
-Base.metadata.create_all(bind=engine)
+#Base.metadata.drop_all(bind=engine)
+#Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 

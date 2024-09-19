@@ -5,7 +5,7 @@ from typing import List
 from sqlalchemy.orm import Session
 from fastapi import Depends
 from shared.dependencies import get_db
-from models.conta_a_pagar_receber_model import ContaPagarReceber
+from contas_a_pagar_e_receber.models.conta_a_pagar_receber_model import ContaPagarReceber
 from functions.sqlalchemy_object_to_dict import sqlalchemy_obj_to_dict
 
 router = APIRouter(prefix="/contas-a-pagar-e-receber")
@@ -17,6 +17,9 @@ class ContaPagarReceber_Response(BaseModel): #Pydantic sendo utilizado
     valor: Decimal
     tipo: str #PAGAR, RECEBER
 
+    class Config:
+        orm_mode = True
+
 class ContaPagarReceber_Request(BaseModel): 
     descricao: str
     valor: Decimal
@@ -24,23 +27,11 @@ class ContaPagarReceber_Request(BaseModel):
 
 
 @router.get("", response_model=List[ContaPagarReceber_Response]) #/ Definicao da Rota GET (ContaPagarReceber)
-def listar_contas():
+def listar_contas(db: Session = Depends(get_db)) -> List[ContaPagarReceber_Response]:
 
-    return [
-        ContaPagarReceber_Response(
-        id=1,
-        descricao="Aluguel",
-        valor=1000.50,
-        tipo="PAGAR"
-        ),
+    return db.query(ContaPagarReceber).all()
 
-        ContaPagarReceber_Response(
-        id=2,
-        descricao="Salário",
-        valor=5000,
-        tipo="RECEBER"
-        ),
-]
+
 
 @router.post("", response_model=ContaPagarReceber_Response, status_code=201) #Definicao da Rota POST (ContaPagarReceber)
 def criar_contas(conta_a_pagar_e_receber_request: ContaPagarReceber_Request, 
@@ -48,17 +39,17 @@ def criar_contas(conta_a_pagar_e_receber_request: ContaPagarReceber_Request,
     
 
     contas_a_pagar_e_receber = ContaPagarReceber(
-        conta_a_pagar_e_receber_request.model_dump()
+
+        descricao = conta_a_pagar_e_receber_request.descricao,
+        valor = conta_a_pagar_e_receber_request.valor,
+        tipo = conta_a_pagar_e_receber_request.tipo
+
         )
     
     db.add(contas_a_pagar_e_receber)
     db.commit()
     db.refresh(contas_a_pagar_e_receber)
 
-    return ContaPagarReceber_Response (
-
-        **sqlalchemy_obj_to_dict(contas_a_pagar_e_receber)  
-    )
-    
+    return contas_a_pagar_e_receber
 
     
